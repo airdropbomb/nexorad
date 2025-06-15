@@ -88,7 +88,7 @@ class MailTMClient:
             except requests.exceptions.HTTPError as e:
                 if e.response.status_code == 429:
                     delay = self.retry_delay_base * (2 ** attempt) + random.uniform(0, 2)
-                    self.log(f"Rate limited by Mail.TM (429). Retrying in {delay:.2f} seconds (Attempt {attempt+1}/{self.max_mail_retries+1})...",实
+                    self.log(f"Rate limited by Mail.TM (429). Retrying in {delay:.2f} seconds (Attempt {attempt+1}/{self.max_mail_retries+1})...", "warning")
                     time.sleep(delay)
                 else:
                     self.log(f"Request failed (HTTPError): {str(e)}", "error")
