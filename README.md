@@ -21,6 +21,8 @@ A lightweight automation script for joining the [Nexorad](https://waitlist.nexor
 - Python 3.7+
 - `requests`
 - `python-dotenv`
+- `os`
+- `colorama`
 
 Install dependencies using:
 
