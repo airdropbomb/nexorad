@@ -1,6 +1,6 @@
 # 🌐 NEXORAD AUTO REFFERAL 
 
-A lightweight automation script for joining the [Nexorad](https://waitlist.nexorad.io/?inviterCode=DPT78NXE) Web3 waitlist using rotating proxies and an invite code.
+A lightweight automation script for joining the [Nexorad](https://waitlist.nexorad.io?inviterCode=SI368VJT) Web3 waitlist using rotating proxies and an invite code.
 
 [![GitHub](https://img.shields.io/github/license/itsmesatyavir/nexorad?style=flat-square)](LICENSE)
 [![Stars](https://img.shields.io/github/stars/itsmesatyavir/nexorad?style=flat-square)](https://github.com/itsmesatyavir/nexorad/stargazers)
@@ -37,8 +37,7 @@ pip install -r requirements.txt
 
 1. **Clone the Repository**
    ```bash
-   git clone https://github.com/itsmesatyavir/nexorad.git
-   cd nexorad
+   git clone https://github.com/airdropbomb/nexorad.git && cd nexorad
    ```
 
 2. **Add Your Environment Variables**
@@ -46,7 +45,7 @@ pip install -r requirements.txt
    Create a `.env` file in the root directory with this content:
 
    ```env
-   INVITER_CODE=DPT78NXE
+   INVITER_CODE=xxxxxxx
    ```
 
 3. **Add Proxies**
@@ -87,13 +86,6 @@ nexorad/
 
 This project is licensed under the [MIT License](LICENSE).
 
----
-
-## 🌐 Author
-
-Made with ❤️ by [itsmesatyavir](https://github.com/itsmesatyavir)
-
----
 
 ## 🌟 Star this repo
 
