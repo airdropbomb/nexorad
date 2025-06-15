@@ -1,45 +1,29 @@
 import os
 import time
-
-# ─── FORESTARMY ——
-def show_banner():
-    banner = """
-    ┌────────────────────────────────────────────┐
-    │        🌲 FOREST ARMY SCRIPT TOOL 🌲       │
-    ├────────────────────────────────────────────┤
-    │ Author   : ITSMESATYAVIR                   │
-    │ Version  : 1.0                             │
-    │ Contact  : t.me/forestarmy                 │
-    │           t.me/rspyder2_bot                │
-    └────────────────────────────────────────────┘
-    """
-    print(banner)
-
-show_banner()
-
-# ─── CPM ───────────────────────
-urls = [
-    "https://www.profitableratecpm.com/rfzgg4b8?key=d854215a4b3c449e653cd67d89b382d0",
-    "https://www.profitableratecpm.com/zssjbg72?key=e386c4eb68236f3c2f097be5345b01fc"
-]
-
-# ─── Visit Each Link Once ───────────────────────
-for url in urls:
-    print(f"[+] Opening: {url}")
-    os.system(f'am start -a android.intent.action.VIEW -d "{url}"')
-    time.sleep(5)  # Short delay between visits
-
-print("\nTHANK YOU!!")
 import requests, random, string, time, re
 from fake_useragent import UserAgent
 from dotenv import load_dotenv
-import os
 from datetime import datetime
 from colorama import Fore, Style, init
 from concurrent.futures import ThreadPoolExecutor, as_completed
 import queue
 
 init(autoreset=True)
+
+# ─── NEW BANNER ───────────────────────
+def show_banner():
+    banner = """
+       █████╗ ██████╗ ██████╗     ███╗   ██╗ ██████╗ ██████╗ ███████╗
+      ██╔══██╗██╔══██╗██╔══██╗    ████╗  ██║██╔═══██╗██╔══██╗██╔════╝
+      ███████║██║  ██║██████╔╝    ██╔██╗ ██║██║   ██║██║  ██║█████╗  
+      ██╔══██║██║  ██║██╔══██╗    ██║╚██╗██║██║   ██║██║  ██║██╔══╝  
+      ██║  ██║██████╔╝██████╔     ██║ ╚████║╚██████╔╝██████╔╝███████╗
+      ╚═╝  ╚═╝╚═════╝ ╚═════╝     ╚═╝  ╚═══╝ ╚═════╝ ╚═════╝ ╚══════╝  
+        By : ADB NODE
+    """
+    print(banner)
+
+show_banner()
 
 ua = UserAgent()
 load_dotenv()
@@ -104,7 +88,7 @@ class MailTMClient:
             except requests.exceptions.HTTPError as e:
                 if e.response.status_code == 429:
                     delay = self.retry_delay_base * (2 ** attempt) + random.uniform(0, 2)
-                    self.log(f"Rate limited by Mail.TM (429). Retrying in {delay:.2f} seconds (Attempt {attempt+1}/{self.max_mail_retries+1})...", "warning")
+                    self.log(f"Rate limited by Mail.TM (429). Retrying in {delay:.2f} seconds (Attempt {attempt+1}/{self.max_mail_retries+1})...",实
                     time.sleep(delay)
                 else:
                     self.log(f"Request failed (HTTPError): {str(e)}", "error")
