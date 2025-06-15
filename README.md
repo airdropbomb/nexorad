@@ -23,6 +23,7 @@ A lightweight automation script for joining the [Nexorad](https://waitlist.nexor
 - `python-dotenv`
 - `os`
 - `colorama`
+- `fake-useragent`
 
 Install dependencies using:
 
